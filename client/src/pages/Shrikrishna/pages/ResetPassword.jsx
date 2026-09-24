@@ -21,7 +21,7 @@ export default function ResetPasswordForm({ handleReset }) {
   let email = localStorage.getItem("tempEmail")
   const resetPass=( )=>{
 
-    axios.post(`http://localhost:8081/user/reset-password/reset`, {email: email, password: password})
+    axios.post(`${process.env.REACT_APP_API_URL}/user/reset-password/reset`, {email: email, password: password})
     .then((res)=>  { 
       toast({
         title: "Password Changed Successfull",

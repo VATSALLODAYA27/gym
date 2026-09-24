@@ -19,13 +19,13 @@ export const ACTION_GET_PRODUCTS = (id) => async (dispatch) => {
   // console.log("data")
   try {
     if (id) {
-      let res = await axios.get("http://localhost:8081/products/" + id);
+      let res = await axios.get(process.env.REACT_APP_API_URL + "/products/" + id);
       console.log(res.data, "from single");
 
       return dispatch({ type: GET_SINGLE_PRODUCTS, payload: res.data });
     }
     
-    let res = await axios.get("http://localhost:8081/products");
+    let res = await axios.get(process.env.REACT_APP_API_URL + "/products");
 
     console.log(res, "from redux actions");
 

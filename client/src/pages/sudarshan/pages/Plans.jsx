@@ -20,7 +20,7 @@ import {
 import {Link} from "react-router-dom"
 // import axios from "axios";
 // const getData = async () => {
-//   let { data } = await axios.get("http://localhost:8081/products");
+//   let { data } = await axios.get(process.env.REACT_APP_API_URL + "/products");
 //   console.log(data.length);
 //   return data;
 // };

@@ -41,7 +41,7 @@ const SingleProductPage = () => {
   useEffect( () => {
 
     try{
-    fetch("http://localhost:8081/products/" + id)
+    fetch(process.env.REACT_APP_API_URL + "/products/" + id)
      .then((res)=>res.json())
      .then((res)=>{
       setSingle(res)

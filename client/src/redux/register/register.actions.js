@@ -9,7 +9,7 @@ export const registerUser = (creds) => async (dispatch) => {
   dispatch({ type: REGISTER_REQUEST });
   try {
     let res = await axios.post(
-      "http://localhost:8081/user/signup",
+      process.env.REACT_APP_API_URL + "/user/signup",
       creds
     );
     dispatch({ type: REGISTER_SUCCESS, payload: res.data });
